@@ -1,4 +1,4 @@
-let nombre = "Luis";
+/*let nombre = "Luis";
 let apellido = "Menendez";
 let precio = "9.99";
 let series = [
@@ -39,3 +39,25 @@ console.log(nombre + " " + apellido);
 console.log(valorRandom(diasSemana));
 console.log(valorRandom(series));
 console.log(valorRandom(peliculas));
+*/
+let persona = {
+  nombre: "Luis",
+  apellido: "Menendez",
+  nacionalidad: "Guatemalteco",
+  edad: 34,
+  genero: "Masculino",
+  estadoCivil: "Soltero",
+};
+
+console.log(persona);
+persona.edad++;
+console.log(persona);
+persona.profesion = "Programador";
+persona.pasatiempos = ["Videojuegos", "Viajar", "Leer", "Cine"];
+persona.stack = ["HTML", "CSS", "JavaScript", "React", "NodeJS"];
+console.log(persona);
+
+persona.stack.push("MongoDB");
+console.log(persona["stack"][5]);
+console.log(persona.stack.length);
+console.log(persona.stack[persona.stack.length - 1]);
