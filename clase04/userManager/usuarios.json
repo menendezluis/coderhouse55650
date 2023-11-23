@@ -1,0 +1,8 @@
+[
+  { "nombre": "Juan", "apellido": "Perez", "edad": 30 },
+  { "nombre": "Luis", "apellido": "Menendez", "edad": 25 },
+  { "nombre": "Juan", "apellido": "Perez", "edad": 30 },
+  { "nombre": "Luis", "apellido": "Menendez", "edad": 25 },
+  { "nombre": "Juan", "apellido": "Perez", "edad": 30 },
+  { "nombre": "Luis", "apellido": "Menendez", "edad": 25 }
+]
