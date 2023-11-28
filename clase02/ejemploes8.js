@@ -32,14 +32,14 @@ Object.keys(estudianteUno).forEach((llave) => {
 });
 */
 //console.log(Object.entries(estudianteUno));
-let name;
+let firstname;
 let lastname;
 Object.entries(estudianteUno).forEach((llaveValor) => {
   if (llaveValor[0] == "nombre") {
-    name = llaveValor[1];
+    firstname = llaveValor[1];
   }
   if (llaveValor[0] == "apellido") {
     lastname = llaveValor[1];
   }
 });
-console.log(name + " " + lastname);
+console.log(firstnames + " " + lastname);

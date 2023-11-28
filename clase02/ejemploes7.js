@@ -19,3 +19,13 @@ function isNameIn(name, names) {
 console.log(
   isNameIn("Juana", nombres) ? "Esta en la lista" : "No esta en la lista"
 );
+
+//? el signo de interregocion se lee si esto es true   isNameIn("Juana", nombres)
+//entonces hace esto return "Esta en la lista"
+// si noes true, returna "No esta en la lista"
+
+if (isNameIn("Luis", nombres)) {
+  console.log("Esta en la lista");
+} else {
+  console.log("No esta en la lista");
+}

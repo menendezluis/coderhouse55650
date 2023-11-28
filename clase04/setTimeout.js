@@ -14,3 +14,6 @@ temporizador(laOperacion);
 temporizador(laOperacion);
 
 console.log("Finalizando operacion");
+
+
+*/
