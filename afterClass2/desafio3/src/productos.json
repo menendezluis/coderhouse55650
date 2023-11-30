@@ -1,0 +1,29 @@
+[
+  {
+    "id": "ae9f41a4-8106-4876-828a-5b09efe41518",
+    "title": "Huevos",
+    "description": "Huevos de gallina",
+    "price": 200,
+    "thumbnail": "sin imagen",
+    "code": "003",
+    "stock": 10
+  },
+  {
+    "id": "ae9f41a4-8106-4876-828a-5b09efe41318",
+    "title": "Pan",
+    "description": "Pan de bolsa",
+    "price": 200,
+    "thumbnail": "sin imagen",
+    "code": "001",
+    "stock": 10
+  },
+  {
+    "id": "ae9f41a4-8106-4876-828a-5b09efe41218",
+    "title": "Leche",
+    "description": "Leche de vaca",
+    "price": 200,
+    "thumbnail": "sin imagen",
+    "code": "002",
+    "stock": 10
+  }
+]
