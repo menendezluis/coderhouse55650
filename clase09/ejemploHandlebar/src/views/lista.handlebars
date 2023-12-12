@@ -1,8 +1,23 @@
 <div>
-  <ul>
-    {{#each usuarios}}
-      <li> {{this.nombre}} {{this.apellido}}</li>
-    {{/each}}
-  </ul>
+  <div>
+    <h1>Usuarios</h1>
+    <ul>
+      {{#if isAdmin}}
+        {{#each usuarios}}
+          {{#if this.active}}
+            <li> {{this.nombre}} {{this.apellido}}</li>
+          {{else}}
+            <li>
+              {{this.nombre}}
+              {{this.apellido}}
+              (inactivo)</li>
+
+          {{/if}}
+        {{/each}}
+      {{else}}
+        <li>No tiene permisos para ver esta lista</li>
+      {{/if}}
+    </ul><br />
+  </div>
 
 </div>
