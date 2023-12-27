@@ -1,0 +1,56 @@
+miPrimeraBase> db.usuarios.insertOne({name:"Luis",last_name:"Menendez",age:34,email:"luis@correo.com"})
+
+miPrimeraBase> db.usuarios.find()
+[
+  {
+    _id: ObjectId('65838e40a74970170a4678e0'),
+    name: 'Luis',
+    last_name: 'Menendez',
+    age: 34,
+    email: 'luis@correo.com'
+  },
+  {
+    _id: ObjectId('65838e9ca74970170a4678e1'),
+    name: 'Jose',
+    last_name: 'Perez',
+    age: 41,
+    email: 'jose@correo.com'
+  }
+]
+miPrimeraBase> db.usuarios.insertOne({name:"Lucas",last_name:"Pereyra",age:"25",email:"lucaspereyra2019@gmail.com})
+Uncaught:
+SyntaxError: Unterminated string constant. (1:71)
+
+> 1 | db.usuarios.insertOne({name:"Lucas",last_name:"Pereyra",age:"25",email:"lucaspereyra2019@gmail.com})
+    |                                                                        ^
+  2 |
+
+miPrimeraBase> db.usuarios.insertOne({name:"Lucas",last_name:"Pereyra",age:"25",email:"lucaspereyra2019@gmail.com"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('65838eeaa74970170a4678e2')
+}
+miPrimeraBase> db.usuarios.find()
+[
+
+miPrimeraBase> use estudiantes
+switched to db estudiantes
+estudiantes> show dbs
+admin                 40.00 KiB
+baseCRUD              72.00 KiB
+config               108.00 KiB
+crudDB                72.00 KiB
+local                 80.00 KiB
+miPrimeraBase         72.00 KiB
+test                   8.00 KiB
+testing-recordsboss   28.00 KiB
+estudiantes> use escuela
+switched to db escuela
+escuela> db.createCollection("estudiantes")
+{ ok: 1 }
+escuela> db.estudiantes.insertOne({name:"Lucas",lastname:"Pereyra",age:25,email:"lucaspereyra@gmail.com"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('658390cda74970170a4678e3')
+}
+escuela> db.createCollection("estudiantes")
