@@ -1,0 +1,40 @@
+/**
+ * Objetivo de la práctica integradora: Realizar una explicación de cómo debe tomar forma nuestro
+ * con base en la persistencia. Actualmente el estudiante ya tiene noción completa del 
+ * funcionamiento basado en FileSystem. El objetivo es comenzar a integrar mongoose y ver cómo
+ * la persistencia puede ser cambiada, sin afectar al funcionamiento de nuestra aplicación.
+ * Por ello, es muy importante que dejes los métodos de los diferentes "Daos", con el mismo nombre,
+ * para que se pueda utilizar en eñ router.
+ * OJO, no se contempla enseñar el patrón Factory, la idea es eneseñar cómo cambiando el import podemos
+ * cambiar la persistencia, pero no estamos dinamizando la persistencia. 
+ * Sin embargo, si consideras que tienes tiempo de sobra en la clase, igual y puedes implementar los
+ * imports dinámicos para hacer el cambio de persistencia dinamizada. ¡Lo dejamos a tu criterio, según surja tu práctica integradora.
+ * 
+ * Te recomiendo no utilizar mucho tiempo en:
+ *      °El desarrollo del dao de FileSystem, porque ésto ya se ha estado trabajando bastante.
+ *      °El desarrollo de Handlebars, ya que las vistas se han visto bastante también.
+ * Se recomienda focalizar la mayor cantidad del tiempo en:
+ *      °El desarrollo de la logística de conexión y tomarte el tiempo para explicar cómo se
+ *       está estructurando el proyecto. Explicar la distribución de carpetas (Aún no hemos
+ *       visto arquitectura, por lo que una explicación ligera bastará. Explicar cómo la info
+ *       fluye desde la petición hasta la respuesta, pasando por los routers y por los managers)
+ *      °El desarrollo de Mongoose para la explicación de la estructura de los esquemas y repaso
+ *       del CRUD básico aplicado a los estudiantes y los cursos.
+ * 
+ * Las recomendaciones mencionadas arriba no significan que sea lo único que debamos hacer. Esta
+ * primera práctica integradora debe abarcar todo el código que está en este proyecto, dentro de
+ * las dos horas de la clase. Por lo que, según el tiempo que evalúes que te tomará, puedas 
+ * comenzar la clase con el FileSystem ya hecho y explicar al estudiante que es el punto de 
+ * partida que actualmente tienen desde su primera entrega de proyecto final.
+ * ¡Profe, sólo tú conoces tu ritmo de trabajo, evalúa cuánto y cómo abarcar este código!
+ */
+
+
+/**
+* La práctica integradora no incluye:
+*   °Multer
+*   °Sockets
+* Se recomienda (si el tiempo lo permite), que si se pretende abarcar uno de estos temas, sea
+* Multer, debido a que existirá otra integración donde se abarcarán los sockets más a profundidad.
+*
+*/
