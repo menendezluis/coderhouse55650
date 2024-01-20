@@ -39,3 +39,13 @@ mongoose
   .catch((error) => {
     console.log("Error en conexión a base de datos", error);
   });
+
+const data = {
+  meta: {
+    arg: { deviceId: "123", ipAddress: "321", phoneNumber: "+17722491117" },
+    requestId: "MsLleEwC0GUMBx83jffcp",
+    requestStatus: "fulfilled",
+  },
+  payload: "LNNFQRTLNZZWWLBDMIUDGPCJEVKHIQZ7",
+  type: "app/loginWithPhone/fulfilled",
+};

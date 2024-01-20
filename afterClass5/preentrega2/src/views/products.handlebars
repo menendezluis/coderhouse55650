@@ -1,0 +1,28 @@
+<div class="products">
+  <div class="productList">
+    {{#each products}}
+      <div class="productCard">
+        <img src="{{this.thumbnail}}" alt="{{this.title}}" />
+
+        <p>{{this.title}}</p>
+        <br />
+        <span>{{this.description}}</span>
+        <br />
+
+        <p>{{this.price}}</p>
+        <p>{{this.category}}</p>
+        <p>{{this.stock}}</p>
+
+      </div>
+    {{/each}}
+  </div>
+  {{#if hasPrevPage}}
+    <a class="prev" href="/products?page={{prevPage}}"><button
+      >Anterior</button></a>
+  {{/if}}
+
+  {{#if hasNextPage}}
+    <a class="next" href="/products?page={{nextPage}}"><button
+      >Siguiente</button></a>
+  {{/if}}
+</div>
