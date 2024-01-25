@@ -1,0 +1,13 @@
+{
+  "cookie": {
+    "originalMaxAge": null,
+    "expires": null,
+    "httpOnly": true,
+    "path": "/"
+  },
+  "counter": 1,
+  "admin": true,
+  "previousCart": ["Potatoes", "Tomatoes", "Milk"],
+  "interests": ["shopping", "javascript", "nodejs"],
+  "__lastAccess": 1706141057883
+}
