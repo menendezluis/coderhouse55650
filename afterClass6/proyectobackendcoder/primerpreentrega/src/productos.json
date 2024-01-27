@@ -1,0 +1,24 @@
+[
+    {
+        "id": "8ac0ce4b-bd2a-42bc-b9e4-78986fe56c55",
+        "title": "TV Led Samsung",
+        "description": "50 pulgadas",
+        "category": "Technology",
+        "price": "450000",
+        "thumbnail": "no img",
+        "code": "producto-01",
+        "stock": 10,
+        "status": true
+    },
+    {
+        "id": "7b106efc-8ebb-432d-8bd1-4b123b03d46c",
+        "title": "Notebook HP",
+        "description": "8gb ram, 128gb",
+        "category": "Technology",
+        "price": "550000",
+        "thumbnail": "no img",
+        "code": "producto-02",
+        "stock": 12,
+        "status": true
+    }
+]
