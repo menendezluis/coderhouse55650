@@ -1,0 +1,71 @@
+/* Estilo general para el contenedor del carrito */
+.cartContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+/* Estilo para la cabecera del carrito */
+.cartHeader {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Estilo para la tabla de productos */
+.cartContent {
+  width: 100%;
+}
+
+/* Estilo para la fila de encabezado de la tabla */
+.cartContentHeader {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+/* Estilo para cada celda de encabezado */
+.cartContentHeaderItem {
+  flex: 1;
+  text-align: center;
+}
+
+/* Estilo para el cuerpo de la tabla */
+.cartContentBody {
+  width: 100%;
+}
+
+/* Estilo para cada fila de productos en el cuerpo de la tabla */
+.cartContentBodyItem {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+/* Estilo para cada celda en el cuerpo de la tabla */
+.cartContentBodyItemImg,
+.cartContentBodyItemName,
+.cartContentBodyItemPrice,
+.cartContentBodyItemQuantity,
+.cartContentBodyItemSubtotal {
+  flex: 1;
+  text-align: center;
+}
+
+/* Estilo para las imágenes de productos en el cuerpo de la tabla */
+.cartContentBodyItemImg img {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+/* Otros estilos opcionales (puedes personalizar según tus preferencias) */
+.cartContentBodyItemName p,
+.cartContentBodyItemPrice p,
+.cartContentBodyItemQuantity p,
+.cartContentBodyItemSubtotal p {
+  margin: 0;
+}
+
+/* Añadir estilos adicionales según sea necesario */

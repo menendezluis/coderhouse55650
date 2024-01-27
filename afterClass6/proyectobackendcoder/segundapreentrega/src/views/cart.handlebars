@@ -1,0 +1,51 @@
+<div class="cartContainer">
+    <div class="cartHeader">
+        <h1>Carrito de compras</h1>
+        </div>
+        <div class="cartContent">
+            <div class="cartContentHeader">
+                <div class="cartContentHeaderItem">
+                    <p>Producto</p>
+                </div>
+                <div class="cartContentHeaderItem">
+                    <p>Precio</p>
+                </div>
+                <div class="cartContentHeaderItem">
+                    <p>Cantidad</p>
+                </div>
+                <div class="cartContentHeaderItem">
+                    <p>Subtotal</p>
+                </div>
+            </div>
+            <div class="cartContentBody">
+                {{#each products}}
+                <div class="cartContentBodyItem">
+                    <div class="cartContentBodyItemImg">
+                        <img src="{{this.product.thumbnail}}" alt="">
+                    </div>
+                    <div class="cartContentBodyItemName">
+                        <p>{{this.product.title}}</p>
+                    </div>
+                    <div class="cartContentBodyItemPrice">
+                        <p>{{this.product.price}}</p>
+                    </div>
+                    <div class="cartContentBodyItemQuantity">
+                    <button  onclick="minus(cart, '{{this.product._id}}')">
+                        -
+                    </button> <p>{{this.quantity}}</p>
+                    <button  onclick="plus('{{this.cart}}', '{{this.product._id}}')">
+                            +
+                    </button>
+                    </div>
+                    <div class="cartContentBodyItemSubtotal">
+                        <p>999999</p>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+            
+        </div>
+    </div>  
+</div>
+
+<script src="/js/carts.js"></script>

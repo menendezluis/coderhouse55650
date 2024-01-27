@@ -1,0 +1,85 @@
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+}
+
+.products {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.productsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.productCard {
+    background-color: #333333;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+}
+
+.productCard img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+p {
+    color: #cccccc;
+    margin: 5px 0;
+}
+
+strong {
+    color: #ffffff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.prev, .next {
+    background-color: #4CAF50;
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.prev:hover, .next:hover {
+    background-color: #45a049;
+}

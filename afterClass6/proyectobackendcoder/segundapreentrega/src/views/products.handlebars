@@ -1,0 +1,29 @@
+<div class="products">
+    <div class="productsList">
+        {{#each products}}
+        <div class="productCard">
+            <img src="{{this.thumbnail}}" alt="{{this.title}}">
+            <h2>{{this.title}}</h2>
+            <p>{{this.category}}</p>
+            <p>{{this.description}}</p>
+            <p><strong>${{this.price}}</strong></p>
+
+            <form action="/carts/{{../cartId}}/product/{{this._id}}" method="post">
+                <label class="quantity" for="quantity">Cantidad:</label>
+                <input class="quantity" type="number" id="quantity" name="quantity" value="1" min="1">
+                <button class="addToCart" type="submit">Agregar al carrito</button>
+            </form>
+        </div>
+        {{/each}}
+    </div>
+
+    {{#if hasPrevPage}}
+    <a class="prev"></a>
+    <a href="/products?page={{prevPage}}"><button>Anterior</button></a>
+    {{/if}}
+
+    {{#if hasNextPage}}
+    <a class="next"></a>
+    <a href="/products?page={{nextPage}}"><button>Siguiente</button></a>
+    {{/if}}
+</div>
