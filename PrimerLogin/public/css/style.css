@@ -1,0 +1,112 @@
+.body{
+    background-color: rgb(6, 6, 34);
+    
+}
+
+
+.containerForm{
+    background-color: rgb(55, 29, 82);
+    border: 2px solid rgb(124, 66, 186);
+    color: #fff;
+    padding: 10px;
+    width: 30%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.containerForm h1{
+    text-align: center;
+}
+.containerForm button{
+    width: 100%;
+    margin: 5px;
+    border-radius: 10px;
+    border: 2px solid rgb(124, 66, 186);
+}
+
+button{
+    border-radius: 5px;
+    padding: 5px;
+    width: 70%;
+}
+input{
+    margin: 10px;
+    border-radius: 5px;
+    width: 70%;
+}
+.containerPerfil{
+    display: flex;
+    justify-content: space-around;
+}
+.btnLogout{
+    width: 10%;
+    cursor: pointer;
+}
+
+
+/*------------------------------------------------------------------------*/
+.navHome{
+    background-color: #555;
+    display: flex ;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    background-color:rgb(124, 66, 186) ;
+    color: #fff;
+    padding: 7px;
+    border-radius: 25px;
+}
+.tituloHome{
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+}
+.btnNav{ 
+    display: flex;
+}
+.btnCarrito{
+    width: 100%;
+    border-radius: 10px;
+       
+}
+.containerCard{
+    display: flex;
+    flex-wrap: wrap;
+    /* margin-left: 20px; */
+    justify-content: center;
+}
+
+.containerProductos{
+    display: flex;
+}
+/* .containerForm{
+    width: 80%;
+    margin: 30px;
+} */
+.tituloInputs{
+    background-color: #777;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+.containerBtn{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+#btnAnterior{
+    width: 20%;
+    border-radius: 10px;
+}
+#btnSiguiente{
+    width: 20%;
+    border-radius: 10px;
+}
+.btnVolver{
+    width: 10%;
+    margin: 10px;
+    border-radius: 10px;
+}
