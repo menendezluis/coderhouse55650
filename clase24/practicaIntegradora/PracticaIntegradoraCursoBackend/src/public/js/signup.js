@@ -6,8 +6,7 @@ async function postSignup(first_name, last_name, email, password, age) {
     password,
     age,
   };
-
-  const response = await fetch("/register", {
+  const response = await fetch("/api/sessions/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -29,8 +28,8 @@ signupForm.addEventListener("submit", async (event) => {
   const password = document.getElementById("password").value;
   const age = document.getElementById("age").value;
   const result = await postSignup(first_name, last_name, email, password, age);
-  if (result.respuesta === "Usuario creado con éxito") {
-    window.location.href = "/login";
+  if (result.status === "success") {
+    window.location.href = "/";
   } else {
     alert("Datos incorrectos");
   }

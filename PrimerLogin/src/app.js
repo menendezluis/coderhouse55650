@@ -15,12 +15,9 @@ import cartRoutes from "./routes/cart.routes.js";
 dotenv.config();
 const app = express();
 const PORT = 8080;
-const USER_MONGO = process.env.USER_MONGO;
-const PASSWORD_MONGO = process.env.PASSWORD_MONGO;
-const DB_MONGO = process.env.DB_MONGO;
-const DB_SERVER = process.env.DB_SERVER;
+const DB_URL = process.env.DB_URL || "mongodb://localhost:27017/test";
 
-const DB_URL = `mongodb+srv://${USER_MONGO}:${PASSWORD_MONGO}@${DB_SERVER}/${DB_MONGO}?retryWrites=true&w=majority`;
+console.log(process.env.DB_URL);
 app.use(express.json());
 
 app.engine("handlebars", engine());

@@ -1,0 +1,37 @@
+<div class="profile">
+  <div class="avatar">
+    <img
+      src="https://picsum.photos/200/200"
+      alt="{{user.first_name}}'s Avatar"
+    />
+  </div>
+  <h1>{{user.first_name}} {{user.last_name}}</h1>
+  <p>Email: {{user.email}}</p>
+  <p>Age: {{user.age}}</p>
+  <p> My courses</p>
+  <ul>
+    {{#each user.courses}}
+      <li>
+        <h2>{{this.title}}</h2>
+        <p>Teacher: {{this.teacher}}</p>
+        <p>Duration: {{this.description}}</p>
+      </li>
+    {{/each}}
+  </ul>
+
+</div>
+
+<div class="profile">
+  <ul>
+    {{#each courses}}
+      <li>
+        <button class="asignar" id={{this._id}}>Add</button>
+        <h2>{{this.title}}</h2>
+        <p>Teacher: {{this.teacher}}</p>
+        <p>Duration: {{this.description}}</p>
+      </li>
+    {{/each}}
+  </ul>
+</div>
+
+<script src="/js/perfil.js"></script>
