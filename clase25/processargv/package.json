@@ -1,0 +1,22 @@
+{
+  "name": "processargv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ejemplos.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "startprod": "node 2commander.js -d -p 8080 -u root --letters a b c d e f g",
+    "startdev": "node 2commander.js -d -p 3000 --mode development -u root --letters a b c d e f g",
+    "start": "node index.js --mode production",
+    "dev": "node index.js --mode development"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^12.0.0",
+    "dotenv": "^16.4.4",
+    "express": "^4.18.2"
+  }
+}
