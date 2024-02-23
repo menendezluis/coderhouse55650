@@ -15,5 +15,3 @@ process.on("message", (message) => {
 });
 
 console();
-algo;
-otracosa();

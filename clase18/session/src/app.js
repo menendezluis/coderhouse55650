@@ -49,8 +49,8 @@ app.post("/login", (req, res) => {
       respuesta: "error",
     });
   req.session.username = username;
-
-  req.session.admin = true;
+  req.session.createAt = new Date();
+  req.session.req.session.admin = true;
   res.status(200).json({
     respuesta: "ok",
   });

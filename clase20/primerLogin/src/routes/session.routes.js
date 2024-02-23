@@ -6,7 +6,26 @@ import passport from "passport";
 
 const router = Router();
 
-router.post("/login", async (req, res) => {
+router.post("/login", 
+  passport.authenticate("login", {
+    successRedirect: "/privado",
+    failureRedirect: "/failLogin",
+  }),
+  async (req, res) => {
+    if (!req.user) {
+      return res.status(401).json("error de autenticacion");
+    }
+    req.session.user = {
+      first_name: req.user.first_name,
+      last_name: req.user.last_name,
+      email: req.user.email,
+      age: req.user.age,
+    };
+    req.session.admin = true;
+    res.send({ status: "success", mesage: "user logged" });
+  }
+
+/*router.post("/login", async (req, res) => {
   const { email, password } = req.body;
   const result = await UserModel.findOne({ email });
 
@@ -28,6 +47,7 @@ router.post("/login", async (req, res) => {
     });
   }
 });
+*/
 router.post(
   "/signup",
   passport.authenticate("register", {

@@ -17,5 +17,7 @@ program.option("--mode <mode>", "Modo de ejecución", "production");
 program.parse();
 
 const options = program.opts();
-console.log(options);
-console.log("Remaining arguments: ", program.args);
+
+export default options;
+//console.log(options);
+//console.log("Remaining arguments: ", program.args);
