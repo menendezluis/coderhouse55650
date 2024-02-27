@@ -20,7 +20,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <Input
-        type="text"
+        type
         placeholder="Enter your name"
         value={name}
         style={{ color: "red" }}
