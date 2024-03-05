@@ -1,43 +1,64 @@
-/*
-const getOrders = () => {};
-const getOrderById = () => {};
-const createOrder = () => {};
-const resolveOrder = () => {};
-
-*/
-let orderService = [];
+import DAO from "../dao/index.js";
+let orderService = new DAO.Order();
+let businessService = new DAO.Business();
+let userService = new DAO.User();
 
 const getOrders = async (req, res) => {
-  res.json(orderService);
+  const result = await orderService.getOrders();
+  res.json(result);
 };
 
 const getOrderById = async (req, res) => {
   const { id } = req.params;
-  const order = orderService.findIndex((u) => u.id === id);
+  const order = await orderService.getOrderById(id);
 
-  if (order === -1) {
+  if (!order) {
     res.status(404).send("Order not found");
   }
 
-  res.json(orderService[order]);
+  res.json(order);
 };
 
 const createOrder = async (req, res) => {
-  const order = req.body;
-  order.id = Math.random().toString(36).substr(2, 9);
-  orderService.push(order);
-  res.json(order);
+  const { user, business, products } = req.body;
+  let userFound = await userService.getUserById(user);
+  let businessFound = await businessService.getBusinessById(business);
+  let actualOrders = businessFound.productos.filter((product) =>
+    products.includes(product.id)
+  );
+
+  let sum = actualOrders.reduce((acc, product) => {
+    return acc + product.price;
+  }, 0);
+
+  let orderNumber = Date.now() + Math.floor(Math.random() * 1000);
+
+  let newOrder = {
+    number: orderNumber,
+    business,
+    user,
+    status: "pending",
+    products: actualOrders.map((product) => product.id),
+    totalPrice: sum,
+  };
+
+  let result = await orderService.createOrder(newOrder);
+  res.send({ status: "success", result: result });
 };
 
 const resolveOrder = async (req, res) => {
   const { id } = req.params;
   const newOrder = req.body;
-  const order = orderService.findIndex((u) => u.id === id);
-  if (order === -1) {
+  let orderById = await orderService.getOrderById(req.params.oid);
+  if (!orderById) {
     res.status(404).send("Order not found");
   }
-  orderService[order] = newOrder;
-  res.json(orderService[order]);
+  const order = await orderService.resolveOrder(id, newOrder);
+
+  res.json({
+    status: "Order modified",
+    order,
+  });
 };
 
 export { getOrders, getOrderById, createOrder, resolveOrder };

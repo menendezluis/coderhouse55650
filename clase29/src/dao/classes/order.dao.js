@@ -1,4 +1,4 @@
-import orderModel from "../models/order.model.js";
+import orderModel from "../models/orders.model.js";
 
 export default class Order {
   getOrders = async () => {

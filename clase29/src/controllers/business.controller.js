@@ -1,49 +1,49 @@
-/*const getBusiness = () => {};
-const getBusinessById = () => {};
-const createBusiness = () => {};
-const addProduct = () => {};
-
-*/
-let businessService = [];
+import DAO from "../dao/index.js";
+let businessService = new DAO.Business();
 
 const getBusiness = async (req, res) => {
-  res.json(businessService);
+  const result = await businessService.getBusiness();
+  res.json(result);
 };
 
 const getBusinessById = async (req, res) => {
   const { id } = req.params;
-  const business = businessService.findIndex((u) => u.id === id);
+  const business = businessService.getBusinessById(id);
 
-  if (business === -1) {
+  if (!business) {
     res.status(404).send("Business not found");
   }
 
-  res.json(businessService[business]);
+  res.json(business);
 };
 [];
 const createBusiness = async (req, res) => {
   const business = req.body;
-  business.id = Math.random().toString(36).substr(2, 9);
-  businessService.push(business);
-  res.json(business);
+  const result = await businessService.saveBusiness(business);
+  res.json({
+    status: "Business saved",
+    business,
+  });
 };
 
 const addProduct = async (req, res) => {
   const { id } = req.params;
   const product = req.body;
 
-  const businessId = businessService.findIndex((u) => u.id === id);
-
-  if (businessId === -1) {
-    res.status(404).send("Business not found");
-  }
-
   if (product.name === undefined || product.price === undefined) {
     res.status(400).send("Bad request");
   }
+  const businessId = businessService.addProduct(id, product);
 
-  businessService[businessId].products.push(product);
-  res.json(businessService[businessId]);
+  if (!businessId) {
+    res.status(404).send("Business not found");
+  }
+
+  res.json({
+    status: "Product added",
+    businessId,
+    product,
+  });
 };
 
 export { getBusiness, getBusinessById, createBusiness, addProduct };

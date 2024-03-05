@@ -1,29 +1,30 @@
-/*const getUsers = () => {};
-const getUserById = () => {};
-const saveUser = () => {};
-*/
-let userService = [];
+import DAO from "../dao/index.js";
+
+const userService = new DAO.User();
 
 const getUsers = async (req, res) => {
-  res.json(userService);
+  const result = await userService.getUsers();
+  res.json(result);
 };
 
 const getUserById = async (req, res) => {
   const { id } = req.params;
-  const user = userService.findIndex((u) => u.id === id);
+  const user = await userService.getUserById(id);
 
-  if (user === -1) {
+  if (!user) {
     res.status(404).send("User not found");
   }
 
-  res.json(userService[user]);
+  res.json(user);
 };
 
 const saveUser = async (req, res) => {
   const user = req.body;
-  user.id = Math.random().toString(36).substr(2, 9);
-  userService.push(user);
-  res.json(user);
+  const result = await userService.saveUser(user);
+  res.json({
+    status: "User saved",
+    user,
+  });
 };
 
 export { getUsers, getUserById, saveUser };
