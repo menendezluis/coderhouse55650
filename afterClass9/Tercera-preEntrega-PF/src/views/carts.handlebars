@@ -1,0 +1,22 @@
+<div class="cartContainer">
+    <div class="cartHeader">
+        <h1>Carrito de compras</h1>
+    </div >
+    <div class="cartContent" >
+<div class="cartContentHeader">
+    <div class="cartContentHeader__item">
+        <h3>Producto</h3>
+
+    </div>
+   
+{{#each products}}
+    <div class="cartContentHeader__item">
+        
+        <h3>{{this.product.title}}</h3>
+    </div>
+    <div class="cartContentHeader__item">
+        <h3>{{this.product.price}}</h3>
+    </div>
+{{/each}}
+
+</div>

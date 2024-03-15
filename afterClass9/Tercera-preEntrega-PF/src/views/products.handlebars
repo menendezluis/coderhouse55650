@@ -1,0 +1,29 @@
+<div class="product-list">
+  {{#each data.products}}
+    <div class="product-card">
+      <div class="product-card__image">
+        <img src="{{this.thumbnail}}" alt="{{this.name}}" />
+      </div>
+      <div class="product-card__info">
+        <h4 id="title">{{this.title}}</h4>
+        <p class="description">{{this.description}}</p>
+        <p class="price">{}</p>
+        <p class="stock">Available: {}</p>
+        <p class="code">Product Code: {{this.code}}</p>
+        <p class="id">ID: {{this._id}}</p>
+        <button class="addProductToCart" id="{{this._id}}">Agregar al carrito</button>
+      
+
+      </div>
+    </div>
+  {{/each}}
+  {{#if data.hasPrevPage}}
+    <a href="/products?page={{prevPage}}"><button class="pagination-button">Previous</button></a>
+  {{/if}}
+  {{#if data.hasNextPage}}
+    <a href="/products?page={{nextPage}}"><button class="pagination-button">Next</button></a>
+  {{/if}}
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/products.js"></script>
+```
