@@ -1,0 +1,12 @@
+{
+  "name": "yarn_ejemplo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}
