@@ -1,7 +1,5 @@
 import config from "../config/config.js";
 import mongoose from "mongoose";
-// import ContactsMongoDao from "./mongo/contact.mongo.js";
-// import ContactsMemoryDao from "./memory/contact.memory.js";
 
 export let Contacts;
 export let Carts;

@@ -7,7 +7,6 @@ fetch("http://localhost:3000/api/orders")
       const div = document.createElement("div");
       const divider = document.createElement("p");
       divider.innerHTML = "--------------------------------";
-
       const priceParagraph = document.createElement("p");
       const statusParagraph = document.createElement("p");
       const number = document.createElement("p");

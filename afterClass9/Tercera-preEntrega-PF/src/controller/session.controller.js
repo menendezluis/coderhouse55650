@@ -2,7 +2,10 @@ import { usersService } from "../repository/index.js";
 
 const UserService = usersService;
 async function login(req, res) {
+  const { email, password } = req.body;
   try {
+    const userExists = await usersService.getUserByEmail(email);
+    const passwordIsCorrect = await usersService.getUserByEmail(email);
     if (!req.loginSuccess) {
       res.status(401).json({ success: false, message: "user not found" });
     } else {
