@@ -1,0 +1,87 @@
+{
+  "aggregate": {
+    "counters": {
+      "vusers.created_by_name.Generar logins": 200,
+      "vusers.created": 200,
+      "http.requests": 200,
+      "plugins.metrics-by-endpoint./api/users/login.errors.ECONNREFUSED": 200,
+      "errors.ECONNREFUSED": 200,
+      "vusers.failed": 200
+    },
+    "rates": {
+      "http.request_rate": 5
+    },
+    "firstCounterAt": 1710984990693,
+    "lastCounterAt": 1710985010156,
+    "firstMetricAt": 1710984990693,
+    "lastMetricAt": 1710985010156,
+    "period": 1710985010000,
+    "summaries": {},
+    "histograms": {}
+  },
+  "intermediate": [
+    {
+      "counters": {
+        "vusers.created_by_name.Generar logins": 97,
+        "vusers.created": 97,
+        "http.requests": 97,
+        "plugins.metrics-by-endpoint./api/users/login.errors.ECONNREFUSED": 96,
+        "errors.ECONNREFUSED": 96,
+        "vusers.failed": 96
+      },
+      "rates": {
+        "http.request_rate": 10
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1710984990693,
+      "lastCounterAt": 1710984999999,
+      "firstMetricAt": 1710984990693,
+      "lastMetricAt": 1710984999999,
+      "period": "1710984990000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.Generar logins": 100,
+        "vusers.created": 100,
+        "http.requests": 100,
+        "plugins.metrics-by-endpoint./api/users/login.errors.ECONNREFUSED": 100,
+        "errors.ECONNREFUSED": 100,
+        "vusers.failed": 100
+      },
+      "rates": {
+        "http.request_rate": 10
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1710985000002,
+      "lastCounterAt": 1710985009999,
+      "firstMetricAt": 1710985000002,
+      "lastMetricAt": 1710985009999,
+      "period": "1710985000000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "plugins.metrics-by-endpoint./api/users/login.errors.ECONNREFUSED": 4,
+        "errors.ECONNREFUSED": 4,
+        "vusers.failed": 4,
+        "vusers.created_by_name.Generar logins": 3,
+        "vusers.created": 3,
+        "http.requests": 3
+      },
+      "rates": {
+        "http.request_rate": 3
+      },
+      "firstCounterAt": 1710985010003,
+      "lastCounterAt": 1710985010156,
+      "firstMetricAt": 1710985010003,
+      "lastMetricAt": 1710985010156,
+      "period": "1710985010000",
+      "http.request_rate": null,
+      "summaries": {},
+      "histograms": {}
+    }
+  ]
+}
