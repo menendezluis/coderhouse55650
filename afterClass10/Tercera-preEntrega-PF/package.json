@@ -1,0 +1,36 @@
+{
+  "name": "desafio-entregable",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000D\u0000e\u0000s\u0000a\u0000f\u0000i\u0000o\u0000C\u0000o\u0000d\u0000e\u0000r\u00003\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "connect-mongo": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.3",
+    "express-compression": "^1.0.2",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.18.0",
+    "mongoose": "^8.2.1",
+    "mongoose-paginate-v2": "^1.8.0",
+    "nodemailer": "^6.9.12",
+    "passport": "^0.7.0",
+    "passport-github2": "^0.1.12",
+    "passport-local": "^1.0.0",
+    "session-file-store": "^1.5.0",
+    "socket.io": "^4.7.4",
+    "socket.io-client": "^4.7.4",
+    "winston": "^3.13.0"
+  }
+}

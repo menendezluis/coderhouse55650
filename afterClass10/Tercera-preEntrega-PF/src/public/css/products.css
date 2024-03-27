@@ -1,0 +1,122 @@
+/* Apply styles to the container of the forms */
+div[style="display: flex;"] {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Style for the individual forms */
+form {
+  flex: 0 0 45%; /* Adjust the width of the forms */
+  margin-right: 20px; /* Added margin for better separation */
+  font-family: Arial, sans-serif; /* Change font for the forms */
+}
+
+/* Styles for form labels */
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #444;
+  font-weight: bold;
+}
+
+/* Style for form inputs */
+input[type="text"],
+textarea {
+  width: calc(100% - 16px); /* Adjust the width of the input elements */
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: Arial, sans-serif; /* Change font for input elements */
+}
+
+/* Style for form buttons */
+button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: Arial, sans-serif; /* Change font for buttons */
+}
+
+/* Change button color on hover */
+button:hover {
+  background-color: #0056b3;
+}
+
+/* CSS for product cards */
+.product-list {
+  display: flex;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust as needed */
+}
+
+.product-card {
+  width: 300px; /* Adjust card width as needed */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-card__image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product-card__info h4 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.product-card__info p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.price {
+  font-weight: bold;
+  color: #27ae60; /* Adjust color as needed */
+}
+
+.stock {
+  font-style: italic;
+}
+
+.code,
+.id {
+  font-size: 14px;
+  color: #888;
+}
+
+/* Pagination button styling */
+.pagination-button {
+  padding: 8px 16px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-button:hover {
+  background-color: #2980b9;
+}
+
+/* Navbar styles */
+nav {
+  color: #fff; /* Set text color to white */
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  font-weight: bold;
+}
