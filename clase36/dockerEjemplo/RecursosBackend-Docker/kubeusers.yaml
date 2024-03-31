@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kubeservice55650v2
+spec:
+  selector:
+    app: kubeusers
+  ports:
+    - port: 80
+      targetPort: 8080
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubedeploy55650v2
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: kubeusers
+  template:
+    metadata:
+      labels:
+        app: kubeusers
+    spec:
+      containers:
+        - name: kubecontainer
+          image: luismenendezdev/usercreator:1.0.0
+          ports:
+            - containerPort: 8080
+          env:
+            - name: MONGO_URL
+              value: mongodb+srv://ecommerce:o5WSLI3YA0AYJ8gL@ecommerce.osbcjez.mongodb.net/docker-55650
+          imagePullPolicy: Always
