@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Store | Iniciar sesión</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <!-- Animate CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/a3057acf10.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--Bootstrap 5-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/login.styles.css" />
+  </head>
+  <body>
+    <main class="mt-3">
+      <div class="pb-4">
+        <div class="form-bg border rounded-4">
+          <div class="w-100 p-4 d-flex justify-content-center pb-4">
+            <div style="width: 26rem">
+              <ul
+                class="nav nav-pills d-flex justify-content-between mb-4 gap-3 flex-wrap"
+                id="ex1"
+                role="tablist"
+              >
+                <li class="nav-item flex-fill" role="presentation">
+                  <button class="nav-link actived">Inicia sesión</button>
+                </li>
+                <li class="nav-item flex-fill" role="presentation">
+                  <a class="nav-link text-center" href="./signup.html"
+                    >Registrate</a
+                  >
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div
+                  class="tab-pane fade active show"
+                  id="pills-login"
+                  role="tabpanel"
+                  aria-labelledby="tab-login"
+                >
+                  <form id="login-form">
+                    <div class="text-center mb-1">
+                      <p class="mb-3">Inicia sesion con:</p>
+
+                      <button
+                        type="button"
+                        class="btn btn-link btn-floating mx-1"
+                      >
+                        <i class="fab fa-facebook-f"></i>
+                      </button>
+
+                      <button
+                        type="button"
+                        class="btn btn-link btn-floating mx-1"
+                      >
+                        <i class="fab fa-google"></i>
+                      </button>
+
+                      <button
+                        type="button"
+                        class="btn btn-link btn-floating mx-1"
+                        onclick="moveToGithub()"
+                      >
+                        <i class="fab fa-github"></i>
+                      </button>
+                    </div>
+
+                    <p class="text-center mb-1">o:</p>
+
+                    <div class="mb-3">
+                      <label for="username" class="form-label">
+                        Usuario:
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="username"
+                        placeholder="Ingrese su usuario"
+                        autocomplete="current-username"
+                        required
+                      />
+                    </div>
+                    <div class="mb-3 position-relative">
+                      <label for="password" class="form-label">
+                        Contraseña:
+                      </label>
+                      <div id="eye-container">
+                        <i
+                          class="fa-regular fa-eye-slash show-password"
+                          id="eye-close"
+                        ></i>
+                        <i class="fa-regular fa-eye" id="eye-open"></i>
+                      </div>
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="password"
+                        placeholder="Ingrese su contraseña"
+                        autocomplete="current-password"
+                        required
+                      />
+                    </div>
+                    <div class="row mb-4 d-flex justify-content-center">
+                      <div class="col-md-4 d-flex">
+                        <div class="form-check mb-3 mb-md-0">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="loginCheck"
+                            checked=""
+                          />
+                          <label class="form-check-label" for="loginCheck">
+                            Recuerdame
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <a
+                          href="./forgotPassword.html"
+                          class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                        >
+                          ¿Olvidaste tu contraseña?
+                        </a>
+                      </div>
+                    </div>
+                    <button
+                      type="submit"
+                      id="login-button"
+                      class="btn-submit w-100 mb-4"
+                      onclick="btnSpinner()"
+                    >
+                      Inicia sesión
+                    </button>
+                    <div class="d-flex justify-content-center gap-3">
+                      <p>¿Aún no eres miembro?</p>
+                      <a
+                        href="./signup.html"
+                        class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                      >
+                        Registrate
+                      </a>
+                    </div>
+                  </form>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-register"
+                  role="tabpanel"
+                  aria-labelledby="tab-register"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Boostrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Show Password -->
+    <script src="../js/showPassword.scripts.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/login.scripts.js"></script>
+  </body>
+</html>

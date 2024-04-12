@@ -1,0 +1,267 @@
+:root {
+  --animate-duration: 600ms;
+  --animate-delay: 0s;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #eee;
+}
+
+.navbar {
+  z-index: 1000;
+  width: 100%;
+}
+
+.update-product-container {
+  margin-top: 85px;
+}
+
+p {
+  margin: 0;
+}
+
+.dropdown-menu[data-bs-popper] {
+  left: -120px;
+}
+
+.welcome-user-item {
+  position: absolute;
+  top: 9px;
+  right: 55px;
+}
+
+.navbar-nav {
+  flex-direction: row !important;
+}
+
+.form-container {
+  width: 95%;
+  max-width: 800px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #333;
+}
+
+::placeholder {
+  color: #aaa !important;
+  font-style: italic;
+}
+
+.btn-primary {
+  background-color: #004d9c !important;
+  border: 1px solid #004d9c !important;
+  transition: all 0.3s ease;
+  margin: 1rem 0;
+}
+
+.btn-primary:hover {
+  background-color: #fff !important;
+  border: 1px solid #004d9c !important;
+  color: #004d9c !important;
+}
+
+.thumbnail {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  margin: 1rem 0 0;
+}
+
+.list-group-item {
+  width: 95%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.subtitle {
+  color: #004d9c;
+  padding: 0 0 0.5rem 0;
+  text-decoration: underline;
+}
+
+.next-page {
+  color: #004d9c !important;
+  position: relative;
+  text-decoration: none;
+}
+
+.next-page::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #004d9c !important;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.next-page:hover::before {
+  transform: scaleX(1);
+}
+
+.container-fluid {
+  flex-wrap: nowrap !important;
+  max-width: 1100px;
+}
+
+.dropdown-menu {
+  position: absolute !important;
+}
+
+@media (min-width: 768px) {
+  .w-100 {
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .border-start {
+    border-left: 1px solid #dee2e6 !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .w-100 {
+    height: 270px;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav-products {
+    margin-right: 90px;
+  }
+}
+
+/* Chat */
+
+.fa-times {
+  cursor: pointer;
+}
+
+.chat-img {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.chat-card {
+  width: 300px;
+  height: 500px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.active {
+  display: block;
+}
+
+.chat-form {
+  width: 280px;
+  position: absolute;
+  bottom: 40px;
+  right: 10px;
+}
+
+.chat-label {
+  position: absolute;
+  bottom: 0;
+}
+
+#chat1 .form-outline .form-control ~ .form-notch div {
+  pointer-events: none;
+  border: 1px solid;
+  border-color: #eee;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+#chat1 .form-outline .form-control ~ .form-notch .form-notch-leading {
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-right: none;
+  border-radius: 0.65rem 0 0 0.65rem;
+}
+
+#chat1 .form-outline .form-control ~ .form-notch .form-notch-middle {
+  flex: 0 0 auto;
+  max-width: calc(100% - 1rem);
+  height: 100%;
+  border-right: none;
+  border-left: none;
+}
+
+#chat1 .form-outline .form-control ~ .form-notch .form-notch-trailing {
+  flex-grow: 1;
+  height: 100%;
+  border-left: none;
+  border-radius: 0 0.65rem 0.65rem 0;
+}
+
+#chat1 .form-outline .form-control:focus ~ .form-notch .form-notch-leading {
+  border-top: 0.125rem solid #39c0ed;
+  border-bottom: 0.125rem solid #39c0ed;
+  border-left: 0.125rem solid #39c0ed;
+}
+
+#chat1 .form-outline .form-control:focus ~ .form-notch .form-notch-leading,
+#chat1 .form-outline .form-control.active ~ .form-notch .form-notch-leading {
+  border-right: none;
+  transition: all 0.2s linear;
+}
+
+#chat1 .form-outline .form-control:focus ~ .form-notch .form-notch-middle {
+  border-bottom: 0.125rem solid;
+  border-color: #39c0ed;
+}
+
+#chat1 .form-outline .form-control:focus ~ .form-notch .form-notch-middle,
+#chat1 .form-outline .form-control.active ~ .form-notch .form-notch-middle {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  transition: all 0.2s linear;
+}
+
+#chat1 .form-outline .form-control:focus ~ .form-notch .form-notch-trailing {
+  border-top: 0.125rem solid #39c0ed;
+  border-bottom: 0.125rem solid #39c0ed;
+  border-right: 0.125rem solid #39c0ed;
+}
+
+#chat1 .form-outline .form-control:focus ~ .form-notch .form-notch-trailing,
+#chat1 .form-outline .form-control.active ~ .form-notch .form-notch-trailing {
+  border-left: none;
+  transition: all 0.2s linear;
+}
+
+#chat1 .form-outline .form-control:focus ~ .form-label {
+  color: #39c0ed;
+}
+
+#chat1 .form-outline .form-control ~ .form-label {
+  color: #bfbfbf;
+}

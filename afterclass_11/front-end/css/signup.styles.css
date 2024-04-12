@@ -1,0 +1,117 @@
+:root {
+  --animate-duration: 600ms;
+  --animate-delay: 0s;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("../img/photo-1451187580459-43490279c0fa.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #e6fcd9;
+}
+
+a {
+  text-decoration: none;
+  color: #fcdfbd;
+}
+
+.form-bg,
+.nav-link,
+.form-control,
+.form-control:focus,
+.btn-submit {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.1px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.p-4 {
+  padding: 32px !important;
+  background-color: transparent;
+}
+
+.form-container {
+  max-width: 300px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.form-control::placeholder {
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.nav-link {
+  min-width: 200px;
+  border-radius: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 17px 0;
+  line-height: 1;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.55);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  background-color: #e3ebf7;
+  color: #285192;
+}
+
+.nav-link.actived {
+  background-color: #e3ebf7;
+  color: #285192;
+  opacity: 0.8;
+}
+
+.nav-link.actived:hover {
+  opacity: 1;
+}
+
+.fab-brands,
+.fab {
+  font-size: 14px;
+}
+
+.btn-submit {
+  background-color: #e3ebf7;
+  color: #285192;
+  opacity: 0.8;
+  padding: 14px 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-submit:hover {
+  opacity: 1;
+}
+
+.fa-eye-slash,
+.fa-eye {
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  position: absolute;
+  right: 16px;
+  bottom: 10px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.fa-eye-slash:hover,
+.fa-eye:hover {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.show-password {
+  opacity: 1;
+  z-index: 999;
+}
