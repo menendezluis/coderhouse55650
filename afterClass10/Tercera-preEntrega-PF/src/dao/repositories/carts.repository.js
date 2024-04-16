@@ -24,9 +24,6 @@ export default class CartsRepository {
   }
 
   async getCartById(id) {
-    console.log("heeeeeeeeeeeeeeeeeeeeeeeeeeeeerrereeeeeeeeee");
-    console.log("id", id);
-
     try {
       const cart = await this.cartModel.findById(id);
       return cart;

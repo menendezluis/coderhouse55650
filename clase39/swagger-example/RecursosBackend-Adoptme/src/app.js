@@ -32,8 +32,6 @@ const swaggerOptions = {
   },
   apis: [`${__dirname}/docs/**/*.yaml`],
 };
-
-console.log(`${__dirname}/docs/`);
 const specs = swaggerJsdoc(swaggerOptions);
 app.use(express.json());
 app.use(cookieParser());
